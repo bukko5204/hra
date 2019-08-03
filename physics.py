@@ -7,7 +7,7 @@ min_y_position = 0
 def Floor(x):
     rounded = int(x)
     if rounded > x:
-        rounded += 1
+        rounded -= 1
     return rounded
 
 def Gravity(y_velocity, y_position, Floor, min_y_position):
