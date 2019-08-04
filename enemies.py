@@ -17,4 +17,4 @@ class enemy(self,x, y, y_velocity, x_velocity, img):
     def draw(position, self.img):
         pygame.draw(position, self.img)
 
-spikes = enemy(spikes, 10, 0, 0, 0, spikes.png)
+spikes = enemy(spikes, 10, 0, 0, 0, autodraw 04_08_2019.png)
