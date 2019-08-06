@@ -7,5 +7,5 @@ class Ground():
         self.img = img
         seslf.rotation = rotation
 
-    def draw(self,y_position, img):
+    def draw(self):
         pygame.draw()
