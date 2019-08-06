@@ -9,8 +9,8 @@ def get_image(path):
         if img == None:
                 canonicalized_path = path.replace('/', os.sep).replace('\\', os.sep)
                 img = pygame.image.load(canonicalized_path)
-                _image_library[path] = image
-        return imag
+                _image_library[path] = img
+        return img
 
 class enemy:
 
@@ -28,13 +28,13 @@ class enemy:
         pygame.draw(position, self.img)
 
 class spikes(enemy):
-    x = 10
-    y = 10
-    y_velocity = 0
-    x_velocity = 0
-    img = get_image()
-    img = pygame.image.load('autodraw 04_08_2019.png')
 
+    img = get_image('spikes.png')
+    img = pygame.image.load('spikes.png')
 
-spikes = spikes()
-#toxic_rain = enemy(toxic_rain, 20, 15, 0, 0, 2.5, #img)
+    def draw():
+        return  pygame.draw()
+
+spikes = spikes(10, 10, 0, 0, 'spikes.png')
+#toxic_rain = enemy( 20, 15, 0, 0, #img)
+#mine = enemy(30, 0, 0, 0, img)
