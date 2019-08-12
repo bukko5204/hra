@@ -1,11 +1,34 @@
-class Ground():
+import pygame, sys
 
-    def __init__(self, y_position, lenght, rotation):
-        self.y_position = y_position
-        min_y_position = self.y_position
+pygame.init()
+
+infoObject = pygame.display.Info()
+width, height = infoObject.current_w, infoObject.current_h
+screen = pygame.display.set_mode((width, height), 0, 32)
+
+class ground():
+
+    def __init__(self, y, lenght, rotation):
+        self.y = y
+        min_y = self.y
         self.lenght = lenght
         self.img = img
         self.rotation = rotation
 
     def draw(self):
-        pygame.draw()
+        self.position(self.y, height*0.95)
+
+
+earth = ground()
+
+black = 0, 0, 0
+
+while 1:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit();
+
+    screen.fill(black)
+    ground.draw()
+    pygame.display.flip()
