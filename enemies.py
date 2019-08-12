@@ -1,16 +1,11 @@
 import os
 import pygame
 
-_image_library = {}
+pygame.init()
 
-def get_image(path):
-        global _image_library
-        img = _image_library.get(path)
-        if img == None:
-                canonicalized_path = path.replace('/', os.sep).replace('\\', os.sep)
-                img = pygame.image.load(canonicalized_path)
-                _image_library[path] = img
-        return img
+infoObject = pygame.display.Info()
+width, height = infoObject.current_w, infoObject.current_h
+screen = pygame.display.set_mode((width, height), 0, 32)
 
 class enemy:
 
@@ -19,22 +14,29 @@ class enemy:
         self.y = y
         self.y_velocity = y_velocity
         self.x_velocity = x_velocity
-        self.img = img
+        self.img = pygame.image.load('spikes.png')
 
-    def position(self):
-        position = [self.x, self.y]
+    def draw(self, screen):
+    #    self.img = pygame.image.load('spikes.png')
+        self.position = (self.x, self.y)
+        screen.blit(self.img, self.position)
 
-    def draw(self):
-        pygame.draw(position, self.img)
+# class spikes(enemy):
+#
+#     img = pygame.image.load('spikes.png')
+#
+#     #def draw(self):
+#     #    return  pygame.draw()
 
-class spikes(enemy):
 
-    img = get_image('spikes.png')
-    img = pygame.image.load('spikes.png')
+spikes = enemy(10, 10, 0, 0, 'spikes.png')
+black = 0, 0, 0
 
-    def draw():
-        return  pygame.draw()
-
-spikes = spikes(10, 10, 0, 0, 'spikes.png')
+while 1:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT: sys.exit();
+    screen.fill(black)
+    spikes.draw(screen)
+    pygame.display.flip()
 #toxic_rain = enemy( 20, 15, 0, 0, #img)
 #mine = enemy(30, 0, 0, 0, img)
