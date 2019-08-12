@@ -1,4 +1,4 @@
-import os
+import sys
 import pygame
 
 pygame.init()
@@ -14,10 +14,10 @@ class enemy:
         self.y = y
         self.y_velocity = y_velocity
         self.x_velocity = x_velocity
-        self.img = pygame.image.load('spikes.png')
+        self.img = pygame.image.load(img)
 
-    def draw(self, screen):
-    #    self.img = pygame.image.load('spikes.png')
+    def draw(self):
+
         self.position = (self.x, self.y)
         screen.blit(self.img, self.position)
 
@@ -34,9 +34,12 @@ black = 0, 0, 0
 
 while 1:
     for event in pygame.event.get():
-        if event.type == pygame.QUIT: sys.exit();
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit();
+
     screen.fill(black)
-    spikes.draw(screen)
+    spikes.draw()
     pygame.display.flip()
 #toxic_rain = enemy( 20, 15, 0, 0, #img)
 #mine = enemy(30, 0, 0, 0, img)
