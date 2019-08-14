@@ -17,9 +17,8 @@ class ground:
 
     def draw(self):
         self.img = pygame.transform.scale(self.img, (self.lenght, 100))
+        #self.img = pygame.transform.rotate(self.img, self.rotation)
         self.position = (self.y , 10)
-        #ground = pygame.draw.rect(screen, (255, 255, 255), (25, 35, 100, 100))
-        #screen.blit(ground, self.position)
         screen.blit(self.img, self.position)
 
 
