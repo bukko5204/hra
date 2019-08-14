@@ -17,7 +17,6 @@ class enemy:
         self.img = pygame.image.load(img)
 
     def draw(self):
-
         self.position = (self.x, self.y)
         screen.blit(self.img, self.position)
 
