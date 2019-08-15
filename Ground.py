@@ -8,17 +8,16 @@ screen = pygame.display.set_mode((width, height), 0, 32)
 
 class ground:
 
-    def __init__(self, x, lenght, rotation, img):
-        self.x = x
-    # a bad idea    min_y = self.y
+    def __init__(self, y, lenght, rotation, img):
+        self.y = y
         self.lenght = lenght
         self.rotation = rotation
         self.img = pygame.image.load(img)
         self.img = pygame.transform.scale(self.img, (self.lenght, 100))
         self.img = pygame.transform.rotate(self.img, self.rotation)
+        self.position = (self.y , 10)
 
     def draw(self):
-        self.position = (self.x , 10)
         screen.blit(self.img, self.position)
 
 
