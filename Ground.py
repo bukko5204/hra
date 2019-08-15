@@ -12,17 +12,17 @@ class ground:
         self.y = y
     # a bad idea    min_y = self.y
         self.lenght = lenght
-        self.img = pygame.image.load(img)
         self.rotation = rotation
+        self.img = pygame.image.load(img)
+        self.img = pygame.transform.scale(self.img, (self.lenght, 500))
+        self.img = pygame.transform.rotate(self.img, self.rotation)
 
     def draw(self):
-        self.img = pygame.transform.scale(self.img, (self.lenght, 100))
-        #self.img = pygame.transform.rotate(self.img, self.rotation)
         self.position = (self.y , 10)
         screen.blit(self.img, self.position)
 
 
-earth = ground(10, 200, 10, 'grass.png')
+earth = ground(10, 500, 1, 'grass.png')
 
 black = 0, 0, 0
 
