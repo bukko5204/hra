@@ -23,7 +23,7 @@ class ground:
 
 earth = ground(10, 200, 1, 'grass.png')
 
-black = 0, 0, 0
+black = (0, 0, 0)
 
 while 1:
     for event in pygame.event.get():

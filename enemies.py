@@ -42,3 +42,4 @@ while 1:
     pygame.display.flip()
 #toxic_rain = enemy( 20, 15, 0, 0, #img)
 #mine = enemy(30, 0, 0, 0, img)
+#bear = enemy()
