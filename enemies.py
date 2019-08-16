@@ -7,7 +7,7 @@ infoObject = pygame.display.Info()
 width, height = infoObject.current_w, infoObject.current_h
 screen = pygame.display.set_mode((width, height), 0, 32)
 
-class enemy:
+class enemy(positionable):
 
     def __init__(self, x, y, x_velocity, y_velocity, img):
         self.x = x
