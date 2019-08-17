@@ -17,7 +17,7 @@ class enemy(positionable):
         self.img = pygame.image.load(img)
 
     def draw(self):
-        self.position = (self.x, self.y)
+        self.position = self.get_position()
         screen.blit(self.img, self.position)
 
 # class spikes(enemy):

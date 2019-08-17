@@ -22,7 +22,7 @@ class player(positionable):
     def move(self):
         self.x, self.y = get_position()
         self.x = self.x * x_velocity * time
-        self.y = self.y *y_velocity * time
+        self.y = self.y * y_velocity * time
 
     def get_position(self):
         self.position = (self.x, self.y)

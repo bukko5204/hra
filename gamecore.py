@@ -1,11 +1,14 @@
-from .player import player
+from player import player
 import pygame
 from sys import exit
 
 pygame.init()
 
+player = player(10, 10)
+print(player.x)
 infoObject = pygame.display.Info()
-screen = pygame.display.set_mode((infoObject.current_w, infoObject.current_h))
+width, height = infoObject.current_w, infoObject.current_h
+screen = pygame.display.set_mode((width, height), 0, 32)
 
 if __name__ == '__main__':
     while 1:
