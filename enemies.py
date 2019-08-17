@@ -10,7 +10,9 @@ screen = pygame.display.set_mode((width, height), 0, 32)
 
 class enemy(positionable):
 
-    def __init__(self, x, y, x_velocity, y_velocity, img):
+    def __init__(self, x, y, x_velocity,
+                 y_velocity, img):
+                 
         self.x = x
         self.y = y
         self.y_velocity = y_velocity
