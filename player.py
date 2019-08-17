@@ -1,5 +1,6 @@
 import pygame
 from sys import exit
+from positionable import positionable
 
 black = (0, 0, 0)
 
