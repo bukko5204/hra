@@ -4,8 +4,6 @@ from sys import exit
 
 pygame.init()
 
-player = player(10, 10)
-print(player.x)
 infoObject = pygame.display.Info()
 width, height = infoObject.current_w, infoObject.current_h
 screen = pygame.display.set_mode((width, height), 0, 32)
