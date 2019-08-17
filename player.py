@@ -19,18 +19,6 @@ class player(positionable):
         self.position = (self.x, self.y)
         self.img = pygame.image.load('player.png')
 
-    def move(self):
-        self.x, self.y = get_position()
-        self.x = self.x * x_velocity * time
-        self.y = self.y * y_velocity * time
-
-    def get_position(self):
-        self.position = (self.x, self.y)
-        return self.position
-
-    def draw(self):
-        self.position = self.get_position()
-        screen.blit(self.img, self.position)
 
 while 1:
     for event in pygame.event.get():

@@ -16,17 +16,11 @@ class enemy(positionable):
         self.x_velocity = x_velocity
         self.img = pygame.image.load(img)
 
-    def draw(self):
-        self.position = self.get_position()
-        screen.blit(self.img, self.position)
-
 # class spikes(enemy):
 #
 #     img = pygame.image.load('spikes.png')
 #
-#     #def draw(self):
-#     #    return  pygame.draw()
-
+#
 
 spikes = enemy(10, 10, 0, 0, 'spikes.png')
 black = 0, 0, 0
