@@ -2,6 +2,7 @@ from player import player
 from enemies import enemy
 from ground import ground
 from physics import gravity
+from deathscreen import deathscreen
 import pygame
 from sys import exit
 
@@ -12,12 +13,12 @@ infoObject = pygame.display.Info()
 width, height = infoObject.current_w, infoObject.current_h
 screen = pygame.display.set_mode((width, height), 0, 32)
 
-if __name__ == '__main__':
-    while 1:
+while __name__ == '__main__':
+    while player.alive:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
-            # elif event.type == KEYDOWN:
+            # elif event.type == pygame.KEYDOWN:
             #     if event.scancode == 13:
             #
             #         y_velocity += 20 * time
@@ -31,3 +32,6 @@ if __name__ == '__main__':
         enemy.draw()
         player.draw()
         pygame.display.flip()
+
+    while not player.alive:
+        deathscreen()
