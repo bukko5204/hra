@@ -21,19 +21,19 @@ class player(positionable):
         self.img = pygame.image.load('player.png')
 
 
-while 1:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit();
-        elif event.type == KEYDOWN:
-            if event.scancode == 13:
-                y_velocity += 20 * time
-            elif event.scancode == 0:
-                x_velocity -= 20 * time
-            elif event.scancode == 2:
-                x_velocity += 20 * time
-
-    screen.fill(black)
-    player.draw()
-    pygame.display.flip()
+# while 1:
+#     for event in pygame.event.get():
+#         if event.type == pygame.QUIT:
+#             pygame.quit()
+#             sys.exit();
+#         elif event.type == KEYDOWN:
+#             if event.scancode == 13:
+#                 y_velocity += 20 * time
+#             elif event.scancode == 0:
+#                 x_velocity -= 20 * time
+#             elif event.scancode == 2:
+#                 x_velocity += 20 * time
+# 
+#     screen.fill(black)
+#     player.draw()
+#     pygame.display.flip()
