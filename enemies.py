@@ -12,7 +12,7 @@ class enemy(positionable):
 
     def __init__(self, x, y, x_velocity,
                  y_velocity, img):
-                 
+
         self.x = x
         self.y = y
         self.y_velocity = y_velocity
@@ -23,20 +23,18 @@ class enemy(positionable):
 #
 #     img = pygame.image.load('spikes.png')
 #
-#
-
 spikes = enemy(10, 10, 0, 0, 'spikes.png')
-black = 0, 0, 0
-
-while 1:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit();
-
-    screen.fill(black)
-    spikes.draw()
-    pygame.display.flip()
+# black = 0, 0, 0
+#
+# while 1:
+#     for event in pygame.event.get():
+#         if event.type == pygame.QUIT:
+#             pygame.quit()
+#             sys.exit();
+#
+#     screen.fill(black)
+#     spikes.draw()
+#     pygame.display.flip()
 #toxic_rain = enemy( 20, 15, 0, 0, #img)
 #mine = enemy(30, 0, 0, 0, img)
 #bear = enemy()

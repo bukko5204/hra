@@ -23,15 +23,16 @@ class ground:
 
 
 earth = ground(10, 200, 1, 'grass.png')
+pennies = ground(200, 500, 1, 'grass.png')
 
 black = (0, 0, 0)
 
-while 1:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit();
-
-    screen.fill(black)
-    earth.draw()
-    pygame.display.flip()
+# while 1:
+#     for event in pygame.event.get():
+#         if event.type == pygame.QUIT:
+#             pygame.quit()
+#             sys.exit();
+#
+#     screen.fill(black)
+#     earth.draw()
+#     pygame.display.flip()

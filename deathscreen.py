@@ -7,8 +7,11 @@ width, height = infoObject.current_w, infoObject.current_h
 screen = pygame.display.set_mode((width, height), 0, 32)
 restart = pygame.image.load('restart.png')
 restart = pygame.transform.scale(restart, (300, 100))
+restart_place = (width/2 - width/8, height/3 - height/8)
 exit = pygame.image.load('exit.png')
 exit = pygame.transform.scale(exit, (150, 100))
+exit_place = (width/2 - 1.3*width/16 , height/2 - height/8)
+
 
 
 def deathscreen():
@@ -24,10 +27,9 @@ while 1:
             pygame.quit()
             sys.exit();
         elif event.type == pygame.MOUSEBUTTONDOWN:
-            if event.pos == range((width/2 - width/8, height/3 - height/8),
-                (width/2, heigth/3):
+            if event.pos == range(restart_place, (width/2, heigth/3):
                 player.alive = True
-            elif event.pos == (width/2 - 1.3*width/16 , height/2 - height/8):
+            elif event.pos == range(exit_place, height/2 - height/8):
                 pygame.quit()
 
 
