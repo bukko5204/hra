@@ -23,7 +23,7 @@ class enemy(positionable):
 #
 #     img = pygame.image.load('spikes.png')
 #
-spikes = enemy(10, 10, 0, 0, 'spikes.png')
+#spikes = enemy(10, 10, 0, 0, 'spikes.png')
 # black = 0, 0, 0
 #
 # while 1:
