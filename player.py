@@ -19,6 +19,7 @@ class player(positionable):
         self.y_velocity = 0.0
         self.position = (self.x, self.y)
         self.img = pygame.image.load('player.png')
+        self.alive = True
 
 
 # while 1:
@@ -33,7 +34,7 @@ class player(positionable):
 #                 x_velocity -= 20 * time
 #             elif event.scancode == 2:
 #                 x_velocity += 20 * time
-# 
+#
 #     screen.fill(black)
 #     player.draw()
 #     pygame.display.flip()

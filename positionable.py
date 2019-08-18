@@ -21,6 +21,11 @@ class positionable:
         self.position = (self.x, self.y)
         return self.position
 
+    def __int__(self):
+        self.x, self.y = get_position()
+        self.position = (int(self.x), int(self.y))
+        return self.position
+
     def move(self):
         self.x += x_velocity * time
         self.y += y_velocity * time

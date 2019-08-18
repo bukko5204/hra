@@ -15,9 +15,19 @@ def gravity(y_velocity, y_position,
     return y_velocity
 
 
-while y_position > min_y_position:
+def colision():
+    if int(player.position) == int(ground.position) :
+        player.y_velocity = 0.0
+    elif int(player.postion) == int(enemy.position):
+        player.alive = False
 
-    y_velocity = gravity(y_velocity, y_position, min_y_position)
-    x_position += x_velocity * time
-    y_position += y_velocity * time
-    print(x_position, y_position, x_velocity, y_velocity)
+
+
+
+
+# while y_position > min_y_position:
+#
+#     y_velocity = gravity(y_velocity, y_position, min_y_position)
+#     x_position += x_velocity * time
+#     y_position += y_velocity * time
+#     print(x_position, y_position, x_velocity, y_velocity)

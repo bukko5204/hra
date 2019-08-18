@@ -1,6 +1,7 @@
 from player import player
 from enemies import enemy
 from ground import ground
+from physics import gravity
 import pygame
 from sys import exit
 
@@ -18,7 +19,9 @@ if __name__ == '__main__':
                 sys.exit()
             # elif event.type == KEYDOWN:
             #     if event.scancode == 13:
+            #
             #         y_velocity += 20 * time
+            #
             #     elif event.scancode == 0:
             #         x_velocity -= 20 * time
             #     elif event.scancode == 2:
