@@ -1,3 +1,5 @@
+from player import player
+
 x_position = 0
 y_position = 10
 x_velocity = 10

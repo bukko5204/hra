@@ -18,6 +18,7 @@ class enemy(positionable):
         self.y_velocity = y_velocity
         self.x_velocity = x_velocity
         self.img = pygame.image.load(img)
+        self.position = self.get_position()
 
 # class spikes(enemy):
 #

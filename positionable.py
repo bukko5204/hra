@@ -34,3 +34,13 @@ class positionable:
     def draw(self):
         self.position = self.get_position()
         screen.blit(self.img, self.position)
+
+    def gravity(self, y_velocity,
+                y_position, min_y_position):
+        self.y_velocity -= g * time
+
+    def colision(self,  other):
+        if self.position == other.position :
+            self.y_velocity = 0.0
+        elif int(self.position) == int(enemy.position):
+            self.alive = False
